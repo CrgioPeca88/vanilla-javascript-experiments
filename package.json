@@ -1,0 +1,17 @@
+{
+  "name": "media-player",
+  "version": "1.0.0",
+  "description": "Project about media player with an academic purpose-focused principally in JS.",
+  "keywords": [
+    "CrgioPeca88",
+    "GitHub"
+  ],
+  "author": "CrgioPeca88",
+  "license": "MIT",
+  "scripts": {
+    "start": "live-server"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

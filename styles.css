@@ -1,0 +1,23 @@
+body {
+  margin: 0;  
+}
+
+.header {
+  background-color: #e72caf;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header .title {
+  font-style: italic;
+  margin-bottom: 1px;
+}
+
+.main {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
