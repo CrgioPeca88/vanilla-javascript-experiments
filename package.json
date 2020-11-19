@@ -9,7 +9,7 @@
   "author": "CrgioPeca88",
   "license": "MIT",
   "scripts": {
-    "start": "live-server"
+    "start": "live-server --open=src"
   },
   "devDependencies": {
     "live-server": "^1.2.1"
