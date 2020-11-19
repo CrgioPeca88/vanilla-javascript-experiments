@@ -1,9 +1,16 @@
 'use strict';
 
 function MediaPlayer(config) {
-  this.playVideo = false;
   this.media = config.el;
+  this.plugins = config.plugins || [];
+  this._initPlugins();
 } 
+
+MediaPlayer.prototype._initPlugins = function() {
+  this.plugins.forEach(plugin => {
+    plugin.run(this);
+  });
+}
 
 MediaPlayer.prototype.play = function() {
   this.media.play();
@@ -13,9 +20,12 @@ MediaPlayer.prototype.pause = function() {
   this.media.pause();
 }
 
+MediaPlayer.prototype.muted = function(valueMuted) {
+  this.media.muted = (valueMuted !== undefined) ? valueMuted : !this.media.muted;
+}
+
 MediaPlayer.prototype.pp = function() {
-  this.playVideo = !this.playVideo;
-  if(this.playVideo) { this.media.play() } else { this.media.pause() }
+  if(this.media.paused) { this.media.play() } else { this.media.pause() }
 }
 
 export default MediaPlayer;
