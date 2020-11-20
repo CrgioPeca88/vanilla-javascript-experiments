@@ -18,5 +18,5 @@ ppButton.onclick = () => {
 } 
 
 muteButton.onclick = () => {
-  player.muted();
+  if(player.isMuted()) { player.unmuted(); } else { player.muted(); }
 }

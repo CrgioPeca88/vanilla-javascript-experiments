@@ -20,8 +20,16 @@ MediaPlayer.prototype.pause = function() {
   this.media.pause();
 }
 
-MediaPlayer.prototype.muted = function(valueMuted) {
-  this.media.muted = (valueMuted !== undefined) ? valueMuted : !this.media.muted;
+MediaPlayer.prototype.muted = function() {
+  this.media.muted = true;
+}
+
+MediaPlayer.prototype.unmuted = function() {
+  this.media.muted = false;
+}
+
+MediaPlayer.prototype.isMuted = function() {
+  return this.media.muted;
 }
 
 MediaPlayer.prototype.pp = function() {
