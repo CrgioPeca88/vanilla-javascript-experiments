@@ -2,6 +2,7 @@
 // Assets
 import MediaPlayer from './media-player.js';
 import AutoPlay from './plugins/auto-play.js'
+import AutoPause from './plugins/auto-pause.js'
 
 const video = document.querySelector("video");
 const ppButton = document.getElementById("pp");
@@ -9,7 +10,8 @@ const muteButton = document.getElementById("mute");
 const player = new MediaPlayer({ 
     el: video,
     plugins: [
-      new AutoPlay()
+      new AutoPlay(),
+      new AutoPause()
     ]
   });
 
