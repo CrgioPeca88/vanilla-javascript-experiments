@@ -16,13 +16,18 @@ body {
 }
 
 .main {
-  padding: 10px;
+  padding-top: 10px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main .video-container {
   width: 61%;
+  padding: 12px;
+  border: 2px solid black;
+  border-radius: 12px;
 }
 
 .main .video-container .video  {
@@ -43,4 +48,25 @@ body {
 
 .main .video-container .control-buttons .player-button:hover {
   box-shadow: 0 4px 16px 0 #000000;
+}
+
+.main .newzx-container {
+  width: 100%;
+  height: 570px;
+  padding: 3px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.main .newzx-container .newzx {
+  width: 59%;
+  height: 90%;
+  border: 2px solid white;
+  border-radius: 3px;
+  background-image: url('../assets/images/zx10r_2021.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
