@@ -22,3 +22,9 @@ ppButton.onclick = () => {
 muteButton.onclick = () => {
   if(player.isMuted()) { player.unmuted(); } else { player.muted(); }
 }
+
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/src/config/sw.js').catch(error => {
+    console.log("ERROR registrando el service worker: ", error.message);
+  });
+}
