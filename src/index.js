@@ -24,7 +24,7 @@ muteButton.onclick = () => {
 }
 
 if('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/src/config/sw.js').catch(error => {
+  navigator.serviceWorker.register('/sw.js').catch(error => {
     console.log("ERROR registrando el service worker: ", error.message);
   });
 }

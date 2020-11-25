@@ -13,12 +13,12 @@ self.addEventListener('fetch', event => {
     return;
   }
   event.respondWith(cachedResponse(request));
+  event.waitUntil(updateCache(request));
 });
 
 async function precache() {
   const cache = await caches.open('v1');
   return cache.addAll([
-    '/',
     '/src',
     '/src/index.html',
     '/src/index.js',
@@ -35,4 +35,10 @@ async function cachedResponse(request) {
   const cache = await caches.open('v1');
   const response = await cache.match(request);
   return response || fetch(request);
+}
+
+async function updateCache(request) {
+  const cache = await caches.open('v1');
+  const response = await fetch(request);
+  return cache.put(request, response);
 }
