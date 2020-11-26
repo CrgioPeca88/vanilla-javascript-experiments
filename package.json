@@ -9,9 +9,13 @@
   "author": "CrgioPeca88",
   "license": "MIT",
   "scripts": {
-    "start": "live-server --open=src"
+    "start": "parcel src/index.html src/**/*.html"
   },
   "devDependencies": {
-    "live-server": "^1.2.1"
-  }
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.1.2"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
 }
