@@ -18,17 +18,7 @@ self.addEventListener('fetch', event => {
 
 async function precache() {
   const cache = await caches.open('v1');
-  return cache.addAll([
-    '/src',
-    '/src/index.html',
-    '/src/index.js',
-    '/src/styles.css',
-    '/src/media-player.js',
-    '/src/plugins/auto-play.js',
-    '/src/plugins/auto-pause.js',
-    '/assets/videos/cp88.mp4',
-    '/assets/images/zx10r_2021.jpg' 
-  ]);
+  return cache.addAll([]);
 }
 
 async function cachedResponse(request) {
