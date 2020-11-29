@@ -9,7 +9,7 @@ const ALL_ADS = [{
   imageUrl: '../../../assets/images/yamaha.png',
   title: 'Lanzamiento yamaha MT09 2021',
   body: 'Video de la presentación oficial de la nueva yamaha MT09',
-  url: 'youtube.com/watch?v=TUQNl45Hzbo'
+  url: 'https://www.youtube.com/watch?v=TUQNl45Hzbo'
 }];
 
 function Ads() {

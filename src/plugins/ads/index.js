@@ -4,6 +4,7 @@ import Ads from './ads.js';
 
 function AdsPlugin() {
   this.ads = Ads.getInstance();
+  this.adsContainer = document.createElement('div');
   this.handleTimeUpdate = this.handleTimeUpdate.bind(this);
 }
 
@@ -11,8 +12,19 @@ AdsPlugin.prototype.renderAd = function() {
   if(!this.currentAd) {    
     const ad = this.ads.getAd();
     this.currentAd = ad;
-    console.log("ad --> ", ad);
+    this.adsContainer.innerHTML = `
+      <div>
+        <a href="${this.currentAd.url}" target="_blank">
+          <h4>${this.currentAd.title}</h4>
+          <h5>${this.currentAd.body}</h5>
+        </a>
+      </div>
+    `;
   }
+  setTimeout(() => {
+    this.currentAd = null;
+    this.adsContainer.innerHTML = '';
+  }, 5000);
 }
 
 AdsPlugin.prototype.handleTimeUpdate = function() {
@@ -24,6 +36,7 @@ AdsPlugin.prototype.handleTimeUpdate = function() {
 
 AdsPlugin.prototype.run = function(player) {
   this.player = player;
+  this.player.container.appendChild(this.adsContainer);
   this.media = player.media;
   this.media.addEventListener('timeupdate', this.handleTimeUpdate);
 }

@@ -3,8 +3,16 @@
 function MediaPlayer(config) {
   this.media = config.el;
   this.plugins = config.plugins || [];
+  this._initPlayer();
   this._initPlugins();
 } 
+
+MediaPlayer.prototype._initPlayer = function() {
+  this.container = document.createElement('div');
+  this.container.style.position = 'relative';
+  this.media.parentNode.insertBefore(this.container, this.media);
+  this.container.appendChild(this.media); 
+}
 
 MediaPlayer.prototype._initPlugins = function() {
   this.plugins.forEach(plugin => {
