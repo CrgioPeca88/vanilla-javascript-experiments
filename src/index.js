@@ -1,8 +1,9 @@
 'use strict';
 // Assets
 import MediaPlayer from './media-player.js';
-import AutoPlay from './plugins/auto-play.js'
-import AutoPause from './plugins/auto-pause.js'
+import AutoPlay from './plugins/auto-play.js';
+import AutoPause from './plugins/auto-pause.js';
+import AdsPlugin from './plugins/ads/index.js';
 
 const video = document.querySelector("video");
 const ppButton = document.getElementById("pp");
@@ -11,7 +12,8 @@ const player = new MediaPlayer({
     el: video,
     plugins: [
       new AutoPlay(),
-      new AutoPause()
+      new AutoPause(),
+      new AdsPlugin()
     ]
   });
 
