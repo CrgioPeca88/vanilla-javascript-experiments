@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+.main-container .banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), #000), url('../assets/images/js-wall.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.banner .banner-title {
+  text-align: center;
+  color: #fff;
+  padding-top: 120px;
+}
+
+.banner .banner-title h1 {
+  font-family: 'Frijole', cursive;
+  font-size: 70px;
+  text-shadow: 0px 0px 40px #000,
+  0px 0px 60px #000,
+  0px 0px 40px #000,
+  0px 0px 40px #000,
+  0px 0px 40px #000,
+  0px 0px 40px #000;
+}
+
+.banner-title .banner-actions a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+}
+
+.banner-title .banner-actions h3 {
+  text-shadow: 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px #000,
+  0px 0px 20px #000,
+  0px 0px 20px #000;
+}
+
+.header {
+  border: 1px solid red;
+}
