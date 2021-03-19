@@ -9,11 +9,10 @@
   "author": "CrgioPeca88",
   "license": "MIT",
   "scripts": {
-    "start": "parcel src/index.html src/**/*.html"
+    "start": "live-server --open=src"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
-    "typescript": "^4.1.2"
+    "live-server": "^1.2.1"
   },
   "browserslist": [
     "last 1 Chrome version"
