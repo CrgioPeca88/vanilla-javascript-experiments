@@ -80,3 +80,6 @@ Motocicleta.prototype = Object.create(Vehiculo.prototype, {
 const m = new Motocicleta(`Ninja ZX10RR`, `Kawasaki`);
 m.encender();
 console.log(m);
+
+//======================EXPRESIONES REGULARES====================================
+console.log(`%c EXPRESIONES REGULARES ----------------------`, `background-color: yellow; color: black`);
