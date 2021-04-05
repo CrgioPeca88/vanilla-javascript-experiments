@@ -87,14 +87,19 @@ console.log(`%c EXPRESIONES REGULARES ----------------------`, `background-color
 let stringText = 'Hola mi nombre es: nombre=crgiopeca88';
 let expression = /nombre/gm;
 let result = stringText.match(expression);
-console.log(`%c > literal chars - regular expresion 1: ${stringText} =>`, `background-color: black; color: yellow`, result);
+console.log(`%c RE_1 > literal chars: ${stringText} =>`, `background-color: black; color: yellow`, result);
 
 let stringText2 = 'Hola mi nombre es: nombre=crgiopeca88';
 let expression2 = /[aeiou]/gm;
 let result2 = stringText2.match(expression2);
-console.log(`%c > set chars - regular expresion 2: ${stringText2} =>`, `background-color: yellow; color: black`, result2);
+console.log(`%c RE_2 > set chars: ${stringText2} =>`, `background-color: yellow; color: black`, result2);
 
 let stringText3 = 'Hola mi NOMBRE es: nombre=CRGIOpeca88';
 let expression3 = /[A-Ga-g]/gm;
 let result3 = stringText3.match(expression3);
-console.log(`%c > set chars with range - regular expresion 3: ${stringText3} =>`, `background-color: black; color: yellow`, result3);
+console.log(`%c RE_3 > set chars with range: ${stringText3} =>`, `background-color: black; color: yellow`, result3);
+
+let stringText4 = '1). Hola mi NOMBRE es: nombre=CRGIOpeca88';
+let expression4 = /[A-Ga-g0-9peca]/gm; // /[A-Ga-g0-9]|peca88/gm
+let result4 = stringText4.match(expression4);
+console.log(`%c RE_4 > set chars with range and literal chars: ${stringText4} =>`, `background-color: yellow; color: black`, result4);
