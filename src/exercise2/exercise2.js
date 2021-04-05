@@ -93,3 +93,8 @@ let stringText2 = 'Hola mi nombre es: nombre=crgiopeca88';
 let expression2 = /[aeiou]/gm;
 let result2 = stringText2.match(expression2);
 console.log(`%c > set chars - regular expresion 2: ${stringText2} =>`, `background-color: yellow; color: black`, result2);
+
+let stringText3 = 'Hola mi NOMBRE es: nombre=CRGIOpeca88';
+let expression3 = /[A-Ga-g]/gm;
+let result3 = stringText3.match(expression3);
+console.log(`%c > set chars with range - regular expresion 3: ${stringText3} =>`, `background-color: black; color: yellow`, result3);
