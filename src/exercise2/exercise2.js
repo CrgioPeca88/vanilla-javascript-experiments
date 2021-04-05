@@ -83,3 +83,11 @@ console.log(m);
 
 //======================EXPRESIONES REGULARES====================================
 console.log(`%c EXPRESIONES REGULARES ----------------------`, `background-color: yellow; color: black`);
+
+//let re1 = new RegExp('nombre', 'gm');
+//let re1result = re1.exec('Hola mi nombre es:  nombre=crgiopeca88');
+
+let cadena = 'Hola mi nombre es: nombre=crgiopeca88';
+let expresion = /nombre/gm;
+let re1result = cadena.match(expresion);
+console.log(`%c Caracteres literales - regular expresion 1 =>`, `background-color: black; color: yellow`, re1result);
