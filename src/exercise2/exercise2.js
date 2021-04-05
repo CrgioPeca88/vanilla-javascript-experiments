@@ -147,3 +147,8 @@ let stringText8 = `123
 let expression8 = /[^0-9]+/gm;
 let result8 = stringText8.match(expression8);
 console.log(`%c RE_8 > set negation: ${stringText8} =>`, `background-color: yellow; color: black`, result8);
+
+let stringText9 = `1). Hola mi NOMBRE es: nombre=CRGIOpeca88`;
+let expression9 = /[0-9].+\./gm;
+let result9 = stringText9.match(expression9);
+console.log(`%c RE_9 > dot character for any match: ${stringText9} =>`, `background-color: black; color: yellow`, result9);
