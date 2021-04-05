@@ -103,3 +103,27 @@ let stringText4 = '1). Hola mi NOMBRE es: nombre=CRGIOpeca88';
 let expression4 = /[A-Ga-g0-9peca]/gm; // /[A-Ga-g0-9]|peca88/gm
 let result4 = stringText4.match(expression4);
 console.log(`%c RE_4 > set chars with range and literal chars: ${stringText4} =>`, `background-color: yellow; color: black`, result4);
+
+let stringText5 = `sergio andres
+peña cardozo
+crgio
+peca
+crgiopeca88
+angiesita
+angie garcia
+rodriguez`;
+let expression5 = /[a-z]+/gm;
+let result5 = stringText5.match(expression5);
+console.log(`%c RE_5 > repeat char "+" to repeat sets: ${stringText5} =>`, `background-color: black; color: yellow`, result5);
+
+let stringText6 = `sergio andres
+peña cardozo
+crgio
+peca
+crgiopeca88
+angiesita
+angie garcia
+rodriguez`;
+let expression6 = /[a-z]*/gm;
+let result6 = stringText6.match(expression6);
+console.log(`%c RE_6 > repeat char "*" to repeat sets adding unlimited value like undefined: ${stringText6} =>`, `background-color: yellow; color: black`, result6);
