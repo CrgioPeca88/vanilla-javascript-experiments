@@ -82,12 +82,14 @@ m.encender();
 console.log(m);
 
 //======================EXPRESIONES REGULARES====================================
-console.log(`%c EXPRESIONES REGULARES ----------------------`, `background-color: yellow; color: black`);
+console.log(`%c EXPRESIONES REGULARES ----------------------`, `background-color: yellow; color: black; font-weight: bold`);
 
-//let re1 = new RegExp('nombre', 'gm');
-//let re1result = re1.exec('Hola mi nombre es:  nombre=crgiopeca88');
+let stringText = 'Hola mi nombre es: nombre=crgiopeca88';
+let expression = /nombre/gm;
+let result = stringText.match(expression);
+console.log(`%c > literal chars - regular expresion 1: ${stringText} =>`, `background-color: black; color: yellow`, result);
 
-let cadena = 'Hola mi nombre es: nombre=crgiopeca88';
-let expresion = /nombre/gm;
-let re1result = cadena.match(expresion);
-console.log(`%c Caracteres literales - regular expresion 1 =>`, `background-color: black; color: yellow`, re1result);
+let stringText2 = 'Hola mi nombre es: nombre=crgiopeca88';
+let expression2 = /[aeiou]/gm;
+let result2 = stringText2.match(expression2);
+console.log(`%c > set chars - regular expresion 2: ${stringText2} =>`, `background-color: yellow; color: black`, result2);
