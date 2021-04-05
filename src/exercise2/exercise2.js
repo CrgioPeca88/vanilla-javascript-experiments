@@ -127,3 +127,23 @@ rodriguez`;
 let expression6 = /[a-z]*/gm;
 let result6 = stringText6.match(expression6);
 console.log(`%c RE_6 > repeat char "*" to repeat sets adding unlimited value like undefined: ${stringText6} =>`, `background-color: yellow; color: black`, result6);
+
+let stringText7 = `123
+123456
+12345678
+0000
+88
+888`;
+let expression7 = /[0-9]{4,5}/gm; //between 4 and 5
+let result7 = stringText7.match(expression7);
+console.log(`%c RE_7 > set with range and length: ${stringText7} =>`, `background-color: black; color: yellow`, result7);
+
+let stringText8 = `123
+123456sss
+12345688
+0000
+88
+888`;
+let expression8 = /[^0-9]+/gm;
+let result8 = stringText8.match(expression8);
+console.log(`%c RE_8 > set negation: ${stringText8} =>`, `background-color: yellow; color: black`, result8);
