@@ -166,3 +166,11 @@ Hola muy bien, y tu como estas?
 let expression11 = /^Hola.+/gm;
 let result11 = stringText11.match(expression11);
 console.log(`%c RE_11 > start line with specific character or string "^": ${stringText11} =>`, `background-color: black; color: yellow`, result11);
+
+
+let stringText12 = `Hola sergio como estas?
+Hola muy bien, y tu como estas? que hay de nuevo?
+`;
+let expression12 = /como estas\?$/gm;
+let result12 = stringText12.match(expression12);
+console.log(`%c RE_12 > end line with specific character or string "$": ${stringText12} =>`, `background-color: yellow; color: black`, result12);
