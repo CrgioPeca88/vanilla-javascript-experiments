@@ -152,3 +152,10 @@ let stringText9 = `1). Hola mi NOMBRE es: nombre=CRGIOpeca88`;
 let expression9 = /[0-9].+\./gm;
 let result9 = stringText9.match(expression9);
 console.log(`%c RE_9 > dot character for any match: ${stringText9} =>`, `background-color: black; color: yellow`, result9);
+
+//let stringText10 = `1). Hola como estas?`;
+//let stringText10 = `1). Hola angie como estas?`;
+let stringText10 = `1). Hola angie como estas?`;
+let expression10 = /Hola( [a-z]+)? como estas\?/gm;
+let result10 = stringText10.match(expression10);
+console.log(`%c RE_10 > optional values with group () ang ?: ${stringText10} =>`, `background-color: yellow; color: black`, result10);
