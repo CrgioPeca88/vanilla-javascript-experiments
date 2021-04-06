@@ -174,3 +174,24 @@ Hola muy bien, y tu como estas? que hay de nuevo?
 let expression12 = /como estas\?$/gm;
 let result12 = stringText12.match(expression12);
 console.log(`%c RE_12 > end line with specific character or string "$": ${stringText12} =>`, `background-color: yellow; color: black`, result12);
+
+//------------------------------------------------------------------------------
+
+let stringText13 = `Hola sergio como estas?
+Hola muy bien, y tu como estas? que hay de nuevo?
+`;
+let expression13 = /como estas\?$/gm;
+let result13 = stringText13.match(expression13);
+console.log(`%c RE_13 > end line with specific character or string "$": ${stringText13} =>`, `background-color: yellow; color: black`, result13);
+
+let stringText14 = `[2021-04-06 12:39:05am][warn] dsfbdsbjhbshfbfbhjsdbfdshfbjdbsfjhbdfhjdsfhbsdfhhjdsbfhdsfbdbfsdfdsf. dsfbjhdsfbjhbf.bjhdsfbhj
+
+[2021-04-06 12:45:07pm][warn] dsfbdsbjhbshfbfbhjsdbfdshfbjdbsfjhbdfhjdsfhbsdfhhjdsbfhdsfbdbfsdfdsf. dsfbjhdsfbjhbf.bjhdsfbhj
+
+[2021-04-06 12:50:07pm][err] dsfbdsbjhbshfbfbhjsdbfdshfbjdbsfjhbdfhjdsfhbsdfhhjdsbfhdsfbdbfsdfdsf. dsfbjhdsfbjhbf.bjhdsfbhj
+
+[2021-04-10 11:40:01pm][info] sjdahdkjshkjdhsakj
+`;
+let expression14 = /^\[[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}(am|pm)\]/gm;
+let result14 = stringText14.match(expression14);
+console.log(`%c RE_14 > validate date format into log: ${stringText14} =>`, `background-color: black; color: yellow`, result14);
