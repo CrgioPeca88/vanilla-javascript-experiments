@@ -159,3 +159,10 @@ let stringText10 = `1). Hola angie como estas?`;
 let expression10 = /Hola( [a-z]+)? como estas\?/gm;
 let result10 = stringText10.match(expression10);
 console.log(`%c RE_10 > optional values with group () ang ?: ${stringText10} =>`, `background-color: yellow; color: black`, result10);
+
+let stringText11 = `Hola sergio como estas?
+Hola muy bien, y tu como estas?
+`;
+let expression11 = /^Hola.+/gm;
+let result11 = stringText11.match(expression11);
+console.log(`%c RE_11 > start line with specific character or string "^": ${stringText11} =>`, `background-color: black; color: yellow`, result11);
