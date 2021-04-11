@@ -1,5 +1,10 @@
 'use strict';
 
+let name = prompt("What is your name?");
+
+console.log("%c Nombre: ", "background-color: red; color: white", name);
+
+// ============================================================================
 function sum(numberList) {
   let total = 0;
   numberList.forEach(function(element) {
